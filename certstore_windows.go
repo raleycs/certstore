@@ -75,6 +75,24 @@ type winStore struct {
 	store C.HCERTSTORE
 }
 
+// Opens the local machine's cert store
+func OpenSysStore() (Store, error) {
+	return openSysStore()
+}
+
+// openSysStore opens the local machine's cert store.
+func openSysStore() (*winStore, error) {
+	storeName := unsafe.Pointer(stringToUTF16("MY"))
+	defer C.free(storeName)
+
+	store := C.CertOpenStore(CERT_STORE_PROV_SYSTEM_W, 0, 0, C.CERT_SYSTEM_STORE_LOCAL_MACHINE, storeName)
+	if store == nil {
+		return nil, lastError("failed to open system cert store")
+	}
+
+	return &winStore{store}, nil
+}
+
 // openStore opens the current user's personal cert store.
 func openStore() (*winStore, error) {
 	storeName := unsafe.Pointer(stringToUTF16("MY"))
