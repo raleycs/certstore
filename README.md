@@ -1,5 +1,9 @@
-# certstore [![GoDoc](https://godoc.org/github.com/mastahyeti/certstore?status.svg)](http://godoc.org/github.com/mastahyeti/certstore) [![Report card](https://goreportcard.com/badge/github.com/mastahyeti/certstore)](https://goreportcard.com/report/github.com/mastahyeti/certstore) [![OSX Build Status](https://travis-ci.org/mastahyeti/certstore.svg?branch=master)](https://travis-ci.org/mastahyeti/certstore) [![Windows Build status](https://ci.appveyor.com/api/projects/status/github/mastahyeti/certstore?branch=master&svg=true)](https://ci.appveyor.com/project/mastahyeti/certstore/branch/master)
+# certstore [![PkgGoDev](https://pkg.go.dev/badge/github.com/github/certstore?tab=doc)](https://pkg.go.dev/github.com/github/certstore?tab=doc) [![Report card](https://goreportcard.com/badge/github.com/github/certstore)](https://goreportcard.com/report/github.com/github/certstore) [![AppVeyor Windows Build status](https://ci.appveyor.com/api/projects/status/github/github/certstore?branch=main&svg=true)](https://ci.appveyor.com/project/github/certstore/branch/main)
 
+[![Test macOS (recent Go versions)](<https://github.com/github/certstore/workflows/Test%20macOS%20(recent%20Go%20versions)/badge.svg>)](https://github.com/github/certstore/actions?query=workflow%3A%22Test+macOS+%28recent+Go+versions%29%22)  
+[![Test macOS (Go 1.8)](<https://github.com/github/certstore/workflows/Test%20macOS%20(Go%201.8)/badge.svg>)](https://github.com/github/certstore/actions?query=workflow%3A%22Test+macOS+%28Go+1.8%29%22)  
+[![Test Windows (recent Go versions)](<https://github.com/github/certstore/workflows/Test%20Windows%20(recent%20Go%20versions)/badge.svg>)](https://github.com/github/certstore/actions?query=workflow%3A%22Test+Windows+%28recent+Go+versions%29%22)  
+[![Test Windows (Go 1.8)](<https://github.com/github/certstore/workflows/Test%20Windows%20(Go%201.8)/badge.svg>)](https://github.com/github/certstore/actions?query=workflow%3A%22Test+Windows+%28Go+1.8%29%22)
 
 Certstore is a Go library for accessing user identities stored in platform certificate stores. On Windows and macOS, certstore can enumerate user identities and sign messages with their private keys.
 
@@ -17,7 +21,7 @@ import (
 	"crypto/rand"
 	"crypto/sha256"
 
-	"github.com/mastahyeti/certstore"
+	"github.com/github/certstore"
 )
 
 func main() {
