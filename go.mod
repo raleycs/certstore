@@ -1,4 +1,4 @@
-module github.com/zdandoh/certstore
+module github.com/raleycs/certstore
 
 go 1.12
 
