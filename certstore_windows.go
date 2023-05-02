@@ -76,7 +76,7 @@ type winStore struct {
 }
 
 // Opens the local machine's cert store
-func OpenSysStore() (Store, error) {
+func OpenSysStore() (*winStore, error) {
 	return openSysStore()
 }
 
