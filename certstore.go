@@ -12,9 +12,14 @@ var (
 	ErrUnsupportedHash = errors.New("unsupported hash algorithm")
 )
 
-// Open opens the system's certificate store.
+// Open opens the user's certificate store.
 func Open() (Store, error) {
 	return openStore()
+}
+
+// Opens the system's certificate store
+func OpenSys() (Store, error) {
+	return openSysStore()
 }
 
 // Store represents the system's certificate store.
