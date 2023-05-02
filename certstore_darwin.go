@@ -43,7 +43,7 @@ func openStore() (macStore, error) {
 
 // openSysStore is a function for opening the system Mac store
 func openSysStore() (macStore, error) {
-	return nil, errors.New("Opening Sys store is unsupported on Mac at the moment")
+	return macStore(0), errors.New("Opening Sys store is unsupported on Mac at the moment")
 }
 
 // Identities implements the Store interface.
