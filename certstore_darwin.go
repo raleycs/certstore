@@ -41,6 +41,11 @@ func openStore() (macStore, error) {
 	return macStore(0), nil
 }
 
+// openSysStore is a function for opening the system Mac store
+func openSysStore() (macStore, error) {
+	return nil, errors.New("Opening Sys store is unsupported on Mac at the moment")
+}
+
 // Identities implements the Store interface.
 func (s macStore) Identities() ([]Identity, error) {
 	query := mapToCFDictionary(map[C.CFTypeRef]C.CFTypeRef{
