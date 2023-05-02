@@ -12,3 +12,7 @@ func init() {
 func openStore() (Store, error) {
 	return nil, errors.New("certstore only works on macOS and Windows")
 }
+
+func openSysStore() (Store, error) {
+	return nil, errors.New("certstore only works on macOS and Windows")
+}
